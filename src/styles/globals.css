@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  a,
+  button,
+  select {
+    transition: all 0.15s ease-in;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  .font-roboto {
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  .container {
+    max-width: 1400px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
