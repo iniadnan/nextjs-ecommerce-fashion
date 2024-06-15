@@ -1,6 +1,6 @@
 import FrontAnnouncement from "@/components/front/announcement"
-import FrontNavbar from "@/components/front/Navbar"
-import FrontFooter from "@/components/front/Footer"
+import FrontNavbar from "@/components/front/navbar"
+import FrontFooter from "@/components/front/footer"
 
 export default function Layout({
     children,

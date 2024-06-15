@@ -8,6 +8,7 @@
   }
 
   body {
+    background-color: #E3E3E9;
     overflow-x: hidden;
   }
 
@@ -26,9 +27,6 @@
   }
 
   .container {
-    max-width: 1400px;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 }
