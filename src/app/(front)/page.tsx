@@ -1,3 +1,4 @@
+import ShopNow from "@/components/front/buttons/shop-now";
 import BoxImage from "@/components/front/cards/box-image";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +34,34 @@ export default function Page() {
         </div>
       </section>
       {/* COMING SOON */}
-      <section className="w-full px-4 py-4"></section>
+      <section className="w-full px-4 py-4">
+        <div className="container bg-white py-20 px-10 rounded-[20px]">
+          <div className="flex items-center justify-between mb-[50px]">
+            <h2 className="text-[52px] text-[#070707]">Coming Soon</h2>
+            <ShopNow text="See All" link="/product" classList="h-[55px] w-[138px] group" />
+          </div>
+          <div className="flex flex-nowrap justify-between gap-x-4">
+            <article className="h-[620px] w-1/2 relative overflow-hidden rounded-[41px] group">
+              <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/5333e451e30f5d9eded4cac52a774890.png" height={620} width={656} alt="Air Jordan 1 X LV" />
+              <div className="w-full absolute bottom-4 z-10 px-4">
+                <div className="w-full flex items-center justify-between bg-white p-4 rounded-[32px]">
+                  <h3 className="text-[32px] text-[#111111]">Air Jordan 1 x LV</h3>
+                  <ShopNow text="Shop Now" link="/product/hello-world" classList="h-[55px] w-[152px]" />
+                </div>
+              </div>
+            </article>
+            <article className="h-[620px] w-1/2 relative overflow-hidden rounded-[41px] group">
+              <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/26be3ddae218ab11abae26352d732b02.png" height={620} width={656} alt="Air Jordan 1 X Prada" />
+              <div className="w-full absolute bottom-4 z-10 px-4">
+                <div className="w-full flex items-center justify-between bg-white p-4 rounded-[32px]">
+                  <h3 className="text-[32px] text-[#111111]">Air Jordan 1 x Prada</h3>
+                  <ShopNow text="Shop Now" link="/product/hello-world" classList="h-[55px] w-[152px]" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
       {/* PRODUCTS */}
       <main className="w-full px-4 py-4"></main>
       {/* FAQ */}
