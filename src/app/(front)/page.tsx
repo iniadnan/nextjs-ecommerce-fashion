@@ -1,5 +1,6 @@
 import ShopNow from "@/components/front/buttons/shop-now";
 import BoxImage from "@/components/front/cards/box-image";
+import CardProduct from "@/components/front/cards/card-product";
 import Faq from "@/components/front/faq";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function Page() {
         </div>
       </header>
       {/* WE ARE SUPPORTED BY */}
-      <section className="w-full px-4 py-4">
+      <section className="w-full px-4 pb-4">
         <div className="container bg-white py-20 px-16 rounded-[40px]">
           <h2 className="text-[52px] text-[#171717] text-center mb-10">We Are Supported By</h2>
           <div className="flex items-center justify-center gap-x-6">
@@ -35,7 +36,7 @@ export default function Page() {
         </div>
       </section>
       {/* COMING SOON */}
-      <section className="w-full px-4 py-4">
+      <section className="w-full px-4 pb-4">
         <div className="container bg-white py-20 px-10 rounded-[20px]">
           <div className="flex items-center justify-between mb-[50px]">
             <h2 className="text-[52px] text-[#070707]">Coming Soon</h2>
@@ -64,7 +65,42 @@ export default function Page() {
         </div>
       </section>
       {/* PRODUCTS */}
-      {/* <main className="w-full px-4 pt-4"></main> */}
+      <main className="w-full px-4 pb-4">
+        <div className="container bg-white py-20 px-10 rounded-[20px]">
+          <h2 className="text-[52px] text-[#070707] mb-6">Our Product</h2>
+          <div className="flex items-center justify-between mb-10">
+            <div className="flex items-center gap-x-5 font-medium text-[#171717]">
+              <button type="button" className="py-3 px-5">All</button>
+              <button type="button" className="py-3 px-5">T-Shirt</button>
+              <button type="button" className="py-3 px-5">Hoodie</button>
+              <button type="button" className="py-3 px-5">Pants</button>
+              <button type="button" className="py-3 px-5">Accessories</button>
+            </div>
+            <div className="flex items-center gap-x-4">
+              <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
+                Short By
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
+                Filter
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 10L12 14L16 10" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <section className="grid grid-cols-3 gap-4">
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+          </section>
+        </div>
+      </main>
       {/* FAQ */}
       <main className="w-full px-4 pb-4">
         <div className="container flex flex-nowrap items-start gap-x-[46px] bg-white py-20 px-10 rounded-[20px]">
