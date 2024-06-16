@@ -1,5 +1,6 @@
 import ShopNow from "@/components/front/buttons/shop-now";
 import BoxImage from "@/components/front/cards/box-image";
+import Faq from "@/components/front/faq";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -63,9 +64,19 @@ export default function Page() {
         </div>
       </section>
       {/* PRODUCTS */}
-      <main className="w-full px-4 py-4"></main>
+      {/* <main className="w-full px-4 pt-4"></main> */}
       {/* FAQ */}
-      <main className="w-full px-4 py-4"></main>
+      <main className="w-full px-4 pb-4">
+        <div className="container flex flex-nowrap items-start gap-x-[46px] bg-white py-20 px-10 rounded-[20px]">
+          <div className="flex-none w-[507px]">
+            <h2 className="text-[52px] text-[#111111] leading-[62.4px] mb-4">Frequently Asked Questions</h2>
+            <p className="text-base text-[#858585]">Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our team.</p>
+          </div>
+          <div className="grow">
+            <Faq />
+          </div>
+        </div>
+      </main>
       {/* BANNER */}
       <section className="w-full h-[563px] relative px-4 overflow-hidden">
         <div className="h-[563px] w-full relative rounded-[20px] overflow-hidden">
