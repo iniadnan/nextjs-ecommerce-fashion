@@ -1,3 +1,4 @@
+import BoxImage from "@/components/front/cards/box-image";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,19 @@ export default function Page() {
         </div>
       </header>
       {/* WE ARE SUPPORTED BY */}
-      <section className="w-full px-4 py-4"></section>
+      <section className="w-full px-4 py-4">
+        <div className="container bg-white py-20 px-16 rounded-[40px]">
+          <h2 className="text-[52px] text-[#171717] text-center mb-10">We Are Supported By</h2>
+          <div className="flex items-center justify-center gap-x-6">
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+            <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+          </div>
+        </div>
+      </section>
       {/* COMING SOON */}
       <section className="w-full px-4 py-4"></section>
       {/* PRODUCTS */}
