@@ -1,17 +1,18 @@
 import ShopNow from "@/components/front/buttons/shop-now";
 import BoxImage from "@/components/front/cards/box-image";
-import CardProduct from "@/components/front/cards/card-product";
-import Faq from "@/components/front/faq";
+import Faq from "@/components/front/home/faq";
 import Image from "next/image";
 import Link from "next/link";
 import { fontVarien } from '@/styles/fonts';
-import FrontTitleSection from "@/components/front/title-section";
+import FrontTitleSection from "@/components/front/home/title-section";
+import FrontHomeProducts from "@/components/front/home/products";
+import FrontProductsFilter from "@/components/front/home/products-filter";
 
 export default function Page() {
   return (
     <>
       {/* HEADER */}
-      <header className="hidden w-full relative py-2.5 md:py-4 px-2.5 md:px-4">
+      <header className="w-full relative py-2.5 md:py-4 px-2.5 md:px-4">
         <Image className="h-[630px] md:h-[650px] lg:h-[700px] w-full object-cover rounded-[16px] md:rounded-[20px]" priority={true} src="/images/a289883b71e651780ddbd7bd232e292a.jpg" height={700} width={1408} alt="Banner" />
         <div className="h-full w-full absolute top-0 left-0 flex items-center px-[32px] md:px-[56px] z-20">
           <div className="w-full max-w-[993px] text-black">
@@ -26,7 +27,7 @@ export default function Page() {
       {/* WE ARE SUPPORTED BY */}
       <section className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
         <div className="bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] px-16 rounded-[16px] md:rounded-[20px]">
-          <FrontTitleSection title="Frequently Asked Questions" classList="mb-7 md:mb-8 lg:mb-10 text-center" />
+          <FrontTitleSection title="We Are Supported By" classList="mb-7 md:mb-8 lg:mb-10 text-center" />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-5 lg:gap-6">
             <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
             <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
@@ -67,40 +68,11 @@ export default function Page() {
         </div>
       </section>
       {/* PRODUCTS */}
-      <main className="hidden w-full px-4 pb-4">
-        <div className="container bg-white py-20 px-10 rounded-[20px]">
-          <h2 className="text-[52px] text-[#070707] mb-6">Our Product</h2>
-          <div className="flex items-center justify-between mb-10">
-            <div className="flex items-center gap-x-5 font-medium text-[#171717]">
-              <button type="button" className="py-3 px-5">All</button>
-              <button type="button" className="py-3 px-5">T-Shirt</button>
-              <button type="button" className="py-3 px-5">Hoodie</button>
-              <button type="button" className="py-3 px-5">Pants</button>
-              <button type="button" className="py-3 px-5">Accessories</button>
-            </div>
-            <div className="flex items-center gap-x-4">
-              <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
-                Short By
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10L12 14L16 10" stroke="#171717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
-                Filter
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10L12 14L16 10" stroke="#171717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <section className="grid grid-cols-3 gap-4">
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-            <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-          </section>
+      <main className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
+        <div className="bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] px-5 md:px-6 lg:px-8 xl:px-10 rounded-[16px] md:rounded-[20px]">
+          <FrontTitleSection title="Our Product" classList="mb-5 md:mb-6" />
+          <FrontProductsFilter />
+          <FrontHomeProducts />
         </div>
       </main>
       {/* FAQ */}
@@ -116,7 +88,7 @@ export default function Page() {
         </div>
       </main>
       {/* BANNER */}
-      <section className="hidden w-full h-[563px] relative px-2.5 md:px-4 overflow-hidden">
+      <section className="w-full h-[563px] relative px-2.5 md:px-4 overflow-hidden">
         <div className="h-[563px] w-full relative rounded-[16px] md:rounded-[20px] overflow-hidden">
           <Image className="h-full w-full object-cover" src="/images/476cf2f57d0eecb08c9ca0126becf8a3-min.png" height={563} width={1408} alt="Banner" />
           <div className="h-full w-full absolute top-0 left-0 bg-[#070707] z-10 opacity-25"></div>
