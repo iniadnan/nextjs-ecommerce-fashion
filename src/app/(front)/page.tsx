@@ -8,8 +8,9 @@ import Link from "next/link";
 export default function Page() {
   return (
     <>
+      <div className="h-screen"></div>
       {/* HEADER */}
-      <header className="w-full relative px-4 py-4">
+      <header className="hidden w-full relative px-4 py-4">
         <Image className="h-[700px] w-full object-cover rounded-[20px]" priority={true} src="/images/a289883b71e651780ddbd7bd232e292a.jpg" height={700} width={1408} alt="Banner" />
         <div className="h-full w-full absolute top-0 left-10 flex items-center z-20">
           <div className="w-full max-w-[993px] text-black px-4">
@@ -22,7 +23,7 @@ export default function Page() {
         </div>
       </header>
       {/* WE ARE SUPPORTED BY */}
-      <section className="w-full px-4 pb-4">
+      <section className="hidden w-full px-4 pb-4">
         <div className="container bg-white py-20 px-16 rounded-[40px]">
           <h2 className="text-[52px] text-[#171717] text-center mb-10">We Are Supported By</h2>
           <div className="flex items-center justify-center gap-x-6">
@@ -36,7 +37,7 @@ export default function Page() {
         </div>
       </section>
       {/* COMING SOON */}
-      <section className="w-full px-4 pb-4">
+      <section className="hidden w-full px-4 pb-4">
         <div className="container bg-white py-20 px-10 rounded-[20px]">
           <div className="flex items-center justify-between mb-[50px]">
             <h2 className="text-[52px] text-[#070707]">Coming Soon</h2>
@@ -65,7 +66,7 @@ export default function Page() {
         </div>
       </section>
       {/* PRODUCTS */}
-      <main className="w-full px-4 pb-4">
+      <main className="hidden w-full px-4 pb-4">
         <div className="container bg-white py-20 px-10 rounded-[20px]">
           <h2 className="text-[52px] text-[#070707] mb-6">Our Product</h2>
           <div className="flex items-center justify-between mb-10">
@@ -102,7 +103,7 @@ export default function Page() {
         </div>
       </main>
       {/* FAQ */}
-      <main className="w-full px-4 pb-4">
+      <main className="hidden w-full px-4 pb-4">
         <div className="container flex flex-nowrap items-start gap-x-[46px] bg-white py-20 px-10 rounded-[20px]">
           <div className="flex-none w-[507px]">
             <h2 className="text-[52px] text-[#111111] leading-[62.4px] mb-4">Frequently Asked Questions</h2>

@@ -18,14 +18,6 @@
     transition: all 0.15s ease-in;
   }
 
-  .font-inter {
-    font-family: 'Inter', sans-serif !important;
-  }
-
-  .font-roboto {
-    font-family: "Roboto", sans-serif !important;
-  }
-
   .container {
     width: 100%;
     padding-right: 40px;
