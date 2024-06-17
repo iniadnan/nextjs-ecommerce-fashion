@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function FrontFooter() {
     return (
-        <footer className="w-full py-4 px-4">
-            <div className="container flex items-start justify-between bg-[#070707] py-[80px] px-[40px] rounded-[20px]">
-                <div className="w-[433px] text-base text-white">
+        <footer className="w-full md:pt-4 pb-2.5 md:pb-4 px-2.5 md:px-4">
+            <div className="flex flex-wrap md:flex-nowrap items-start justify-between bg-[#070707] p-[35px] sm:p-[45px] md:p-[58px] lg:p-[70px] xl:p-[80px] rounded-[16px] md:rounded-[20px]">
+                <div className="w-full md:w-[380px] lg:w-[433px] text-base text-white mb-8 md:mb-0">
                     <h2 className="mb-6">UrbanElegance</h2>
                     <p className="mb-[42px] opacity-80">UrbanLegance is a sustainable fashion brand that creates stylish, high-quality clothing for confident self-expression. Join us for modern fashion with a classic twist.</p>
                     <a href="mailto:someone@example.com" className="flex items-center justify-between pb-3 border-b border-[#323232] mb-6">
@@ -74,9 +74,9 @@ export default function FrontFooter() {
                         </a>
                     </div>
                 </div>
-                <div className="flex items-start gap-x-[120px]">
-                    <div className="text-base">
-                        <h3 className="text-white mb-4">Shop</h3>
+                <div className="w-full md:w-auto flex flex-wrap items-start gap-y-6 md:gap-x-[80px] lg:gap-x-[100px] xl:gap-x-[120px]">
+                    <div className="w-1/2 md:w-auto text-base">
+                        <h3 className="text-white mb-3 md:mb-4">Shop</h3>
                         <div className="flex flex-col gap-y-2 text-white opacity-80">
                             <Link href="/">Woman</Link>
                             <Link href="/">Man</Link>
@@ -85,8 +85,8 @@ export default function FrontFooter() {
                             <Link href="/">Divided</Link>
                         </div>
                     </div>
-                    <div className="text-base">
-                        <h3 className="text-white mb-4">Help</h3>
+                    <div className="w-1/2 md:w-auto text-base">
+                        <h3 className="text-white mb-3 md:mb-4">Help</h3>
                         <div className="flex flex-col gap-y-2 text-white opacity-80">
                             <Link href="/">Contact</Link>
                             <Link href="/">FAQ</Link>
@@ -95,8 +95,8 @@ export default function FrontFooter() {
                             <Link href="/">About Snaely</Link>
                         </div>
                     </div>
-                    <div className="text-base">
-                        <h3 className="text-white mb-4">About</h3>
+                    <div className="w-1/2 md:w-auto text-base">
+                        <h3 className="text-white mb-3 md:mb-4">About</h3>
                         <div className="flex flex-col gap-y-2 text-white opacity-80">
                             <Link href="/">Just Arrived</Link>
                             <Link href="/">Customization</Link>
