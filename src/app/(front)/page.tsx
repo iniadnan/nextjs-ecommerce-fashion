@@ -80,13 +80,13 @@ export default function Page() {
               <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
                 Short By
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10L12 14L16 10" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 10L12 14L16 10" stroke="#171717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
               <button type="button" className="inline-flex gap-x-2 border border-[#E5E5E5] rounded-[24px] py-3 px-5">
                 Filter
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10L12 14L16 10" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 10L12 14L16 10" stroke="#171717" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
             </div>
