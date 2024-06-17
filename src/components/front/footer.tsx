@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { fontVarien, fontRoboto } from '@/styles/fonts';
+import { fontVarien } from '@/styles/fonts';
 
 export default function FrontFooter() {
     return (
-        <footer className="w-full md:pt-4 pb-2.5 md:pb-4 px-2.5 md:px-4">
+        <footer className="w-full pt-2.5 md:pt-4 pb-2.5 md:pb-4 px-2.5 md:px-4">
             <div className="flex flex-wrap md:flex-nowrap items-start justify-between bg-[#070707] p-[35px] sm:p-[45px] md:p-[58px] lg:p-[70px] xl:p-[80px] rounded-[16px] md:rounded-[20px]">
                 <div className="w-full md:w-[380px] lg:w-[433px] text-base text-white mb-8 md:mb-0">
                     <h2 className={`${fontVarien.className} text-[22px] md:text-[24px] mb-5 md:mb-6`}>UrbanElegance</h2>
