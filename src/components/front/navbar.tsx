@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import { fontVarien, fontRoboto } from '@/styles/fonts';
 
 export default function FrontNavbar() {
     const [isSticky, setIsSticky] = useState(false);
@@ -29,11 +30,11 @@ export default function FrontNavbar() {
         <nav className={clsx("sticky top-0 z-50 w-full transition-all duration-200", { 'px-0': isSticky, 'px-2.5 md:px-4': !isSticky })}>
             <div className={clsx("h-[70px] md:h-[92px] w-full px-4 sm:px-[23px] md:px-[30px] lg:px-10 flex items-center justify-between flex-nowrap bg-white", { 'rounded-0': isSticky, 'rounded-[16px] md:rounded-[20px]': !isSticky })}>
                 <div className="hidden sm:block">
-                    <h2>
+                    <h2 className={fontVarien.className}>
                         <Link href="/" className="text-lg md:text-[21px] lg:text-[24px] text-[#131313] uppercase">UrbanElegance</Link>
                     </h2>
                 </div>
-                <div className="hidden md:flex items-center md:gap-x-6 lg:gap-x-8 font-roboto md:text-base lg:text-lg text-[#131313]">
+                <div className={`${fontRoboto.className} hidden md:flex items-center md:gap-x-6 lg:gap-x-8 md:text-base lg:text-lg text-[#131313]`}>
                     <Link href="/">Discover</Link>
                     <Link href="/">Product</Link>
                     <Link href="/">Mens</Link>
