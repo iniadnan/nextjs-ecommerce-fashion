@@ -5,6 +5,7 @@ import Faq from "@/components/front/faq";
 import Image from "next/image";
 import Link from "next/link";
 import { fontVarien } from '@/styles/fonts';
+import FrontTitleSection from "@/components/front/title-section";
 
 export default function Page() {
   return (
@@ -104,10 +105,10 @@ export default function Page() {
         </div>
       </main>
       {/* FAQ */}
-      <main className="hidden w-full px-4 pb-4">
-        <div className="container flex flex-nowrap items-start gap-x-[46px] bg-white py-20 px-10 rounded-[20px]">
-          <div className="flex-none w-[507px]">
-            <h2 className="text-[52px] text-[#111111] leading-[62.4px] mb-4">Frequently Asked Questions</h2>
+      <main className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
+        <div className="flex flex-wrap md:flex-nowrap items-start md:gap-x-[30px] lg:gap-x-[38px] xl:gap-x-[46px] bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] px-5 md:px-6 lg:px-8 xl:px-10 rounded-[16px] md:rounded-[20px]">
+          <div className="flex-none w-full md:w-[507px] mb-6 md:mb-0">
+            <FrontTitleSection title="Frequently Asked Questions" classList="mb-4" />
             <p className="text-base text-[#858585]">Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our team.</p>
           </div>
           <div className="grow">
