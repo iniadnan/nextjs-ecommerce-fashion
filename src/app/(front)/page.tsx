@@ -10,14 +10,13 @@ import FrontTitleSection from "@/components/front/title-section";
 export default function Page() {
   return (
     <>
-      <div className="h-screen"></div>
       {/* HEADER */}
-      <header className="hidden w-full relative px-4 py-4">
-        <Image className="h-[700px] w-full object-cover rounded-[20px]" priority={true} src="/images/a289883b71e651780ddbd7bd232e292a.jpg" height={700} width={1408} alt="Banner" />
-        <div className="h-full w-full absolute top-0 left-10 flex items-center z-20">
-          <div className="w-full max-w-[993px] text-black px-4">
-            <h2 className="text-[84px] leading-[84px] mb-10">Discover Innovative Designs, Premium Quality, and Unmatched Style</h2>
-            <p className="w-full max-w-[843px] text-xl text-[#212121] mb-10">Immerse Yourself in a World of Fashion Innovation, Where Each Piece is Meticulously Crafted to Combine Superior Quality with Unparalleled Style. From Avant-Garde Designs to Timeless Classics, Our Collection is Curated to Elevate Your Wardrobe and Reflect Your Unique Taste. </p>
+      <header className="w-full relative py-2.5 md:py-4 px-2.5 md:px-4">
+        <Image className="h-[630px] md:h-[650px] lg:h-[700px] w-full object-cover rounded-[16px] md:rounded-[20px]" priority={true} src="/images/a289883b71e651780ddbd7bd232e292a.jpg" height={700} width={1408} alt="Banner" />
+        <div className="h-full w-full absolute top-0 left-0 flex items-center px-[32px] md:px-[56px] z-20">
+          <div className="w-full max-w-[993px] text-black">
+            <h2 className={`${fontVarien.className} text-[38px] sm:text-[41px] md:text-[48px] lg:text-[58px] xl:text-[72px] leading-[38px] sm:leading-[41px] md:leading-[48px] lg:leading-[58px] xl:leading-[72px] mb-7 md:mb-8 lg:mb-10`}>Discover Innovative Designs, Premium Quality, and Unmatched Style</h2>
+            <p className="w-full max-w-[843px] text-base md:text-lg lg:text-xl text-[#212121] mb-7 md:mb-8 lg:mb-10">Immerse Yourself in a World of Fashion Innovation, Where Each Piece is Meticulously Crafted to Combine Superior Quality with Unparalleled Style. From Avant-Garde Designs to Timeless Classics, Our Collection is Curated to Elevate Your Wardrobe and Reflect Your Unique Taste. </p>
             <Link href="/products" className="h-[56px] w-[159px] inline-flex items-center justify-center bg-[#EB4A26] font-medium text-base text-white rounded-[24px]">
               Shop Now
             </Link>
