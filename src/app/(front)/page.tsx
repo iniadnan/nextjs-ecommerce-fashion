@@ -25,10 +25,10 @@ export default function Page() {
         </div>
       </header>
       {/* WE ARE SUPPORTED BY */}
-      <section className="hidden w-full px-4 pb-4">
-        <div className="container bg-white py-20 px-16 rounded-[40px]">
-          <h2 className="text-[52px] text-[#171717] text-center mb-10">We Are Supported By</h2>
-          <div className="flex items-center justify-center gap-x-6">
+      <section className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
+        <div className="bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] px-16 rounded-[16px] md:rounded-[20px]">
+          <FrontTitleSection title="Frequently Asked Questions" classList="mb-7 md:mb-8 lg:mb-10 text-center" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-5 lg:gap-6">
             <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
             <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
             <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
