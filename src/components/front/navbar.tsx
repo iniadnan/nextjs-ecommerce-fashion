@@ -1,21 +1,47 @@
+"use client"
+
 import Link from "next/link";
+import { Bars3Icon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
+import clsx from 'clsx';
 
 export default function FrontNavbar() {
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const element = document.querySelector('nav');
+
+        if (!element) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsSticky(entry.intersectionRatio < 1),
+            { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+        );
+
+        observer.observe(element);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
-        <nav className="w-full px-4">
-            <div className="container h-[92px] w-full flex items-center justify-between flex-nowrap bg-white rounded-[20px]">
-                <div>
-                    <h2><Link href="/" className="text-[24px] text-[#131313] uppercase">UrbanElegance</Link></h2>
+        <nav className={clsx("sticky top-0 z-50 w-full transition-all duration-200", { 'px-0': isSticky, 'px-2.5 md:px-4': !isSticky })}>
+            <div className={clsx("h-[70px] md:h-[92px] w-full px-4 sm:px-[23px] md:px-[30px] lg:px-10 flex items-center justify-between flex-nowrap bg-white", { 'rounded-0': isSticky, 'rounded-[16px] md:rounded-[20px]': !isSticky })}>
+                <div className="hidden sm:block">
+                    <h2>
+                        <Link href="/" className="text-lg md:text-[21px] lg:text-[24px] text-[#131313] uppercase">UrbanElegance</Link>
+                    </h2>
                 </div>
-                <div className="flex items-center gap-x-8 font-roboto text-lg text-[#131313]">
+                <div className="hidden md:flex items-center md:gap-x-6 lg:gap-x-8 font-roboto md:text-base lg:text-lg text-[#131313]">
                     <Link href="/">Discover</Link>
                     <Link href="/">Product</Link>
                     <Link href="/">Mens</Link>
                     <Link href="/">Womens</Link>
                     <Link href="/">Kids</Link>
                 </div>
-                <div className="flex items-center gap-x-4">
-                    <div className="relative h-[44px]">
+                <div className="flex items-center gap-x-3 md:gap-x-4">
+                    <div className="relative h-[40px] sm:h-[44px]">
                         <input
                             id="icon-username"
                             type="text"
@@ -46,8 +72,11 @@ export default function FrontNavbar() {
                             <path d="M15.3299 18.8201C15.3299 20.6501 13.8299 22.1501 11.9999 22.1501C11.0899 22.1501 10.2499 21.7701 9.64992 21.1701C9.04992 20.5701 8.66992 19.7301 8.66992 18.8201" stroke="#292D32" strokeWidth="1.5" strokeMiterlimit="10" />
                         </svg>
                     </button>
+                    <button type="button" className="md:hidden">
+                        <Bars3Icon className="size-6" />
+                    </button>
                 </div>
             </div>
         </nav>
-    )
+    );
 }
