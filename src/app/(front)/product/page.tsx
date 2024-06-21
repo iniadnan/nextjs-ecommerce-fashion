@@ -1,24 +1,14 @@
 import AsideFilter from "@/components/front/aside-filter";
+import Breadcrumb from "@/components/front/breadcrumb";
 import CardProduct from "@/components/front/cards/card-product";
 import Pagination from "@/components/front/pagination";
-import Link from "next/link";
 
 export default function Page() {
     return (
         <>
             <section className="w-full px-4">
                 <div className="w-full py-6 px-10">
-                    <div className="flex items-center gap-x-2 mb-4">
-                        <Link href="/">Home</Link>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 16L14 12L10 8" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <Link href="/">Home</Link>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 16L14 12L10 8" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <Link href="/">Home</Link>
-                    </div>
+                    <Breadcrumb />
                     <div className="flex items-center justify-between">
                         <h1 className="text-[32px] text-[#171717] leading-[40px]">Search Result (48) <span className="text-[#E16F3D]">“Casual”</span></h1>
                         <div className="relative">
