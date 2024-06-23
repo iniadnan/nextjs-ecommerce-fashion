@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/front/breadcrumb";
 import CardProduct from "@/components/front/cards/card-product";
 import Pagination from "@/components/front/pagination";
 
+import "./index.css"
+
 export default function Page() {
     return (
         <>
