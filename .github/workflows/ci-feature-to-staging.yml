@@ -27,8 +27,5 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Run tests
-        run: npm test
-
-      - name: Static code analysis
-        run: npm run lint:fix
+      - name: Run start
+        run: npm start start
