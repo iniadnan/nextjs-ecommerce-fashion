@@ -2,8 +2,13 @@ import AsideFilter from "@/components/front/aside-filter";
 import Breadcrumb from "@/components/front/breadcrumb";
 import CardProduct from "@/components/front/cards/card-product";
 import Pagination from "@/components/front/pagination";
+import type { Metadata } from "next";
 
 import "./index.css"
+
+export const metadata: Metadata = {
+    title: "Products Fashion"
+};
 
 export default function Page() {
     return (
