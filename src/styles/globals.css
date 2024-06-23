@@ -18,9 +18,42 @@
     transition: all 0.15s ease-in;
   }
 
+  input:focus {
+    outline-color: #000;
+  }
+
   .container {
     width: 100%;
-    padding-right: 40px;
+    max-width: 1440px;
     padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 1240px) {
+    .container {
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
