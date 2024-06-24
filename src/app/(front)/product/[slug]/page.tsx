@@ -7,7 +7,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Detail Product"
+    title: "Detail Product - git"
 };
 
 export default function Page() {
