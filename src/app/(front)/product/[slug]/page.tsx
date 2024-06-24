@@ -4,6 +4,12 @@ import CardProduct from "@/components/front/cards/card-product";
 import { fontVarien } from '@/styles/fonts';
 import Image from "next/image";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Detail Article"
+};
+
 export default function Page() {
     return (
         <>
@@ -56,7 +62,7 @@ export default function Page() {
                                 <p>- Voluminous wide cut with tucks.</p>
                                 <p>- Comfortable elastic waist with a relaxed feel.</p>
                                 <p>- Paneled fabric and darts at the knees for easy
-                                movement.</p>
+                                    movement.</p>
                                 <p>- Gusseted cargo pockets offer plenty of storage.</p>
                                 <p>- Adjust the hems to create your own style.</p>
                             </div>
