@@ -43,7 +43,12 @@ export default function Page() {
                         </div>
                         <div className="mb-8">
                             <p className="font-medium text-lg mb-3">Size: <strong>XXL</strong></p>
-                            <div className="flex items-center gap-3"></div>
+                            <div className="flex items-center gap-3">
+                                <button className="h-[45px] w-[83px] flex items-center justify-center bg-[#F7F8F8]/50 border border-[#D0D0D0] rounded-[35px]" type="button">M</button>
+                                <button className="h-[45px] w-[83px] flex items-center justify-center bg-[#F7F8F8]/50 border border-[#D0D0D0] rounded-[35px]" type="button">L</button>
+                                <button className="h-[45px] w-[83px] flex items-center justify-center bg-[#F7F8F8]/50 border border-[#D0D0D0] rounded-[35px]" type="button">XL</button>
+                                <button className="h-[45px] w-[83px] flex items-center justify-center bg-[#F7F8F8]/50 border border-[#D0D0D0] rounded-[35px]" type="button">XXL</button>
+                            </div>
                         </div>
                         <div className="flex flex-nowrap items-center gap-x-4 font-medium text-base mb-8">
                             <button type="button" className="h-[43px] w-1/2 text-[#EB4A26] border border-[#EB4A26] rounded-full">Add To Wishlist</button>
