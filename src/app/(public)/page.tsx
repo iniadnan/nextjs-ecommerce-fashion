@@ -34,7 +34,7 @@ export default function Page() {
       {/* WE ARE SUPPORTED BY */}
       <section className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
         <div className="w-full bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
-          <div className="container">
+          <div className="container px-8 sm:px-10 md:px-12 lg:px-14 xl:px-16">
             <FrontTitleSection title="We Are Supported By" classList="mb-7 md:mb-8 lg:mb-10 text-center" />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-5 lg:gap-6">
               <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
@@ -50,7 +50,7 @@ export default function Page() {
       {/* COMING SOON */}
       <section className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
         <div className="w-full bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
-          <div className="container">
+          <div className="container px-5 md:px-6 lg:px-8 xl:px-10">
             <div className="flex items-center justify-between mb-[30px] sm:mb-[36px] md:mb-[42px] lg:mb-[50px]">
               <FrontTitleSection title="Coming Soon" />
               <ShopNow text="See All" link="/product" classList="h-[55px] w-[138px] group" />
@@ -81,7 +81,7 @@ export default function Page() {
       {/* PRODUCTS */}
       <main className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
         <div className="w-full bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
-          <div className="container">
+          <div className="container px-5 md:px-6 lg:px-8 xl:px-10">
             <FrontTitleSection title="Our Product" classList="mb-5 md:mb-6" />
             <FrontProductsFilter />
             <FrontHomeProducts />
@@ -91,7 +91,7 @@ export default function Page() {
       {/* FAQ */}
       <main className="w-full px-2.5 md:px-4 pb-2.5 md:pb-4">
         <div className="w-full bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
-          <div className="container flex flex-wrap md:flex-nowrap items-start md:gap-x-[30px] lg:gap-x-[38px] xl:gap-x-[46px]">
+          <div className="container flex flex-wrap md:flex-nowrap items-start md:gap-x-[30px] lg:gap-x-[38px] xl:gap-x-[46px] px-5 md:px-6 lg:px-8 xl:px-10">
             <div className="flex-none w-full md:w-[507px] mb-6 md:mb-0">
               <FrontTitleSection title="Frequently Asked Questions" classList="mb-4" />
               <p className="text-base text-[#858585]">Everything you need to know about the product and billing. Can’t find the answer you’re looking for? Please chat to our team.</p>

@@ -5,7 +5,7 @@ export default function FrontFooter() {
     return (
         <footer className="w-full pt-2.5 md:pt-4 pb-2.5 md:pb-4 px-2.5 md:px-4">
             <div className="bg-[#070707] py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
-                <div className="container flex flex-wrap md:flex-nowrap items-start justify-between">
+                <div className="container flex flex-wrap md:flex-nowrap items-start justify-between px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20">
                     <div className="w-full md:w-[380px] lg:w-[433px] text-base text-white mb-8 md:mb-0">
                         <h2 className={`${fontVarien.className} text-[22px] md:text-[24px] mb-5 md:mb-6`}>UrbanElegance</h2>
                         <p className="mb-[42px] opacity-80">UrbanLegance is a sustainable fashion brand that creates stylish, high-quality clothing for confident self-expression. Join us for modern fashion with a classic twist.</p>

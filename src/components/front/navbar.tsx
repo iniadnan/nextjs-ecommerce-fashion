@@ -29,7 +29,7 @@ export default function FrontNavbar() {
     return (
         <nav className={clsx("sticky top-0 z-50 w-full transition-all duration-200", { 'px-0': isSticky, 'px-2.5 md:px-4': !isSticky })}>
             <div className={clsx("h-[70px] md:h-[92px] w-full bg-white", { 'rounded-0': isSticky, 'rounded-[16px] md:rounded-[20px]': !isSticky })}>
-                <div className="container h-full flex items-center justify-between flex-nowrap">
+                <div className="container h-full flex items-center justify-between flex-nowrap px-5 md:px-6 lg:px-8 xl:px-10">
                     <div className="hidden sm:block">
                         <h2 className={fontVarien.className}>
                             <Link href="/" className="text-lg md:text-[21px] lg:text-[24px] text-[#131313] uppercase">UrbanElegance</Link>
