@@ -33,7 +33,7 @@ export default function Page() {
                     <div className="grow text-[#111111] mb-2.5 md:mb-3 xl:mb-4">
                         <section className="flex flex-col gap-y-2.5 md:gap-y-3 xl:gap-y-4 mb-2.5 md:mb-3 xl:mb-4">
                             <h2 className="font-semibold text-base md:text-base lg:text-base xl:text-lg">Uniqlo</h2>
-                            <h1 className="font-bold text-[21px] md:text-[23px] lg:text-[25px] xl:text-[28px] leading-[33.89px]">UNIQLO U WIDE FIT PARACHUTE CARGO PANTS</h1>
+                            <h1 className="font-bold text-[21px] md:text-[23px] lg:text-[25px] xl:text-[28px] leading-[27px] md:leading-[28px] lg:leading-[30px] xl:leading-[33.89px]">UNIQLO U WIDE FIT PARACHUTE CARGO PANTS</h1>
                             <p className="font-bold text-lg md:text-[21px] lg:text-[21px] xl:text-[24px]">$59.90</p>
                         </section>
                         <div className="mb-2.5 md:mb-3 xl:mb-4">
