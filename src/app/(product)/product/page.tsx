@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <section className="w-full px-4">
-                <div className="w-full py-6 md:gap-x-6 md:px-5 lg:px-6 xl:px-10">
+            <section className="w-full">
+                <div className="container py-6 md:gap-x-6 md:px-5 lg:px-6 xl:px-10">
                     <Breadcrumb />
                     <div className="flex flex-wrap md:flex-nowrap items-center justify-between">
                         <h1 className="text-[24px] md:text-[26px] lg:text-[28px] xl:text-[32px] text-[#171717] leading-[40px]">Search Result (48) <span className="text-[#E16F3D]">“Casual”</span></h1>
@@ -34,7 +34,7 @@ export default function Page() {
                 </div>
             </section>
             <div className="w-full px-4 pt-10 pb-16">
-                <div className="flex flex-nowrap items-start md:gap-x-6 md:px-5 lg:px-6 xl:px-10">
+                <div className="container flex flex-nowrap items-start md:gap-x-6 md:px-5 lg:px-6 xl:px-10">
                     <AsideFilter />
                     <div className="hidden md:block flex-none h-full w-px bg-[#EFEFEF]"></div>
                     <main className="grow">

@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <div className="w-full md:px-4">
-                <div className="w-full py-6 px-10">
+            <div className="w-full">
+                <div className="container py-6 md:gap-x-6 md:px-5 lg:px-6 xl:px-10">
                     <Breadcrumb />
                 </div>
             </div>
             {/* MAIN PRODUCT */}
-            <main className="w-full md:px-4">
-                <div className="w-full flex flex-wrap md:flex-wrap lg:flex-nowrap md:gap-x-5 lg:gap-x-6 xl:gap-x-10 py-6 px-5 md:px-6 lg:px-6 xl:px-10">
+            <main className="w-full">
+                <div className="container flex flex-wrap md:flex-wrap lg:flex-nowrap md:gap-x-5 lg:gap-x-6 xl:gap-x-10 py-6 px-5 md:px-6 lg:px-6 xl:px-10">
                     <div className="flex-none flex flex-wrap md:flex-nowrap gap-x-4 w-full md:w-[500px] lg:w-[580px] xl:w-[650px]">
                         <div className="order-2 md:order-1 flex md:flex-col gap-4 flex-wrap flex-none w-full md:w-[143px]">
                             <Image className="h-[143px] w-[143px] object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/2bd7f1f53dbd0b611e9e1006b243f782.png`} height={622} width={485} alt={"Hello"} />
@@ -87,9 +87,9 @@ export default function Page() {
                 </div>
             </main>
             {/* OUR PRODUCT */}
-            <div className="w-full px-4">
-                <div className="w-full py-10">
-                    <h2 className={`${fontVarien.className} text-[40px] text-[#111111] mb-10`}></h2>
+            <div className="w-full">
+                <div className="container w-full py-10 px-5 md:px-6 lg:px-6 xl:px-10">
+                    <h2 className={`${fontVarien.className} text-[40px] text-[#111111] mb-6 sm:mb-7 md:mb-8 lg:mb-9 xl:mb-10`}>Our Product</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
                         <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
