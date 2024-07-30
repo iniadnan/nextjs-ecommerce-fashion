@@ -1,10 +1,9 @@
 import Breadcrumb from "@/components/front/breadcrumb";
 import ButtonColor from "@/components/front/buttons/button-color";
-import CardProduct from "@/components/front/cards/card-product";
-import { fontVarien } from '@/styles/fonts';
 import Image from "next/image";
 
 import type { Metadata } from "next";
+import OurProdcutSwiper from "@/components/front/detail-product/our-porduct";
 
 export const metadata: Metadata = {
     title: "Detail Product -"
@@ -87,16 +86,7 @@ export default function Page() {
                 </div>
             </main>
             {/* OUR PRODUCT */}
-            <div className="w-full">
-                <div className="container w-full py-10 px-5 md:px-6 lg:px-6 xl:px-10">
-                    <h2 className={`${fontVarien.className} text-[40px] text-[#111111] mb-6 sm:mb-7 md:mb-8 lg:mb-9 xl:mb-10`}>Our Product</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                    </div>
-                </div>
-            </div>
+            <OurProdcutSwiper />
         </>
     )
 }
