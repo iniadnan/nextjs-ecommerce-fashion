@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 export default async function Page() {
     const file = await fs.readFile(process.cwd() + '/src/data/index.json', 'utf8');
     const { brands, categories, products } = JSON.parse(file);
+    const showProducts = products.slice(0, 6);
     return (
         <>
             <section className="w-full">
@@ -56,8 +57,8 @@ export default async function Page() {
                     <div className="hidden md:block flex-none h-full w-px bg-[#EFEFEF]"></div>
                     <main className="grow">
                         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-3 xl:gap-4 mb-10">
-                            {products.map((product: ProductProps) => (
-                                <CardProduct key={product.id} title={product.name} image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug={product.slug} category="" colors={product.colors} price={product.price} />
+                            {showProducts.map((product: ProductProps) => (
+                                <CardProduct key={product.id} title={product.name} image={product.image} slug={product.slug} category="" colors={product.colors} price={product.price} />
                             ))}
                         </div>
                         <Pagination />

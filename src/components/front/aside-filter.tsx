@@ -1,41 +1,65 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from 'react';
 import Link from "next/link";
+import Image from "next/image";
+import styles from './AsideFilter.module.css';
 
 export default function AsideFilter() {
-    const colors = [
-        {
-            color: "yellow", code: "#F4DE6E"
-        },
-        {
-            color: "black", code: "#000000"
-        },
-        {
-            color: "friargray", code: "#838382"
-        },
-        {
-            color: "red", code: "#F12D2D"
-        },
-        {
-            color: "granitegreen", code: "#8a8972"
-        },
-        {
-            color: "blue", code: "#1D39F4"
-        },
-        {
-            color: "pink", code: "#D574B2"
-        },
-        {
-            color: "tamarillo", code: "#a91717"
-        },
-        {
-            color: "pesto", code: "#6a873a"
-        },
-        {
-            color: "diserria", code: "#df8f5a"
-        },
-        {
-            color: "yuma", code: "#cdbf9a"
+    const [minPrice, setMinPrice] = useState(2500);
+    const [maxPrice, setMaxPrice] = useState(7500);
+    const priceGap = 1000;
+
+    const progressRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (progressRef.current) {
+            progressRef.current.style.left = `${(minPrice / 10000) * 100}%`;
+            progressRef.current.style.right = `${100 - (maxPrice / 10000) * 100}%`;
         }
-    ]
+    }, [minPrice, maxPrice]);
+
+    const handleMinInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value);
+        if (maxPrice - value >= priceGap) {
+            setMinPrice(value);
+        }
+    };
+
+    const handleMaxInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value);
+        if (value - minPrice >= priceGap) {
+            setMaxPrice(value);
+        }
+    };
+
+    const handleRangeMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value);
+        if (maxPrice - value >= priceGap) {
+            setMinPrice(value);
+        }
+    };
+
+    const handleRangeMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value);
+        if (value - minPrice >= priceGap) {
+            setMaxPrice(value);
+        }
+    };
+
+    const colors = [
+        { color: "yellow", code: "#F4DE6E" },
+        { color: "black", code: "#000000" },
+        { color: "friargray", code: "#838382" },
+        { color: "red", code: "#F12D2D" },
+        { color: "granitegreen", code: "#8a8972" },
+        { color: "blue", code: "#1D39F4" },
+        { color: "pink", code: "#D574B2" },
+        { color: "tamarillo", code: "#a91717" },
+        { color: "pesto", code: "#6a873a" },
+        { color: "diserria", code: "#df8f5a" },
+        { color: "yuma", code: "#cdbf9a" }
+    ];
 
     return (
         <aside className="flex-none hidden md:w-[220px] lg:w-[240px] xl:w-[267px] md:flex flex-col gap-y-5 lg:gap-y-5 xl:gap-y-6">
@@ -85,10 +109,54 @@ export default function AsideFilter() {
             <div className="h-px w-full bg-[#F4F6F8]"></div>
             <div>
                 <h3 className="font-medium text-base text-[#151515] md:mb-3 lg:mb-4">Price</h3>
+                <div className="w-full relative">
+                    <Image className="w-full h-auto" src="/images/product-prince-range.svg" alt="Price Indicator" priority={true} height={57} width={254} />
+                    <div className={styles.slider}>
+                        <div ref={progressRef} className={styles.progress}></div>
+                    </div>
+                    <div className={styles.rangeInput}>
+                        <input
+                            type="range"
+                            className={`${styles.rangeMin} ${styles.rangeThumb}`}
+                            min="0"
+                            max="10000"
+                            value={minPrice}
+                            step="100"
+                            onChange={handleRangeMinChange}
+                        />
+                        <input
+                            type="range"
+                            className={`${styles.rangeMax} ${styles.rangeThumb}`}
+                            min="0"
+                            max="10000"
+                            value={maxPrice}
+                            step="100"
+                            onChange={handleRangeMaxChange}
+                        />
+                    </div>
+                    <div className={`${styles.priceInput} gap-x-5 mt-2`}>
+                        <div className={styles.field}>
+                            <input
+                                type="number"
+                                className={`${styles.inputMin} ${styles.noSpinButton} font-semibold text-sm text-[#171717]`}
+                                value={minPrice}
+                                onChange={handleMinInputChange}
+                            />
+                        </div>
+                        <div className={styles.field}>
+                            <input
+                                type="number"
+                                className={`${styles.inputMax} ${styles.noSpinButton} font-semibold text-sm text-[#171717]`}
+                                value={maxPrice}
+                                onChange={handleMaxInputChange}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
             <button type="button" className="w-full py-1.5 rounded-full border border-[#EB4A26] hover:bg-[#EB4A26] text-center font-medium text-sm text-[#EB4A26] hover:text-white">
                 Apply Price
             </button>
         </aside>
-    )
+    );
 }
