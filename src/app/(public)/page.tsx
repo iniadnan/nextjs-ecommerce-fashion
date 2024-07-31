@@ -87,7 +87,7 @@ export default async function Page() {
         <div className="w-full bg-white py-[35px] sm:py-[45px] md:py-[58px] lg:py-[70px] xl:py-[80px] rounded-[16px] md:rounded-[20px]">
           <div className="container px-5 md:px-6 lg:px-8 xl:px-10">
             <FrontTitleSection title="Our Product" classList="mb-5 md:mb-6" />
-            <FrontProductsFilter />
+            <FrontProductsFilter isShowCategory={true} isShowShortBy={true} isShowFilter={true} />
             <FrontHomeProducts products={showProducts} />
           </div>
         </div>
