@@ -35,15 +35,15 @@ export default function FrontNavbar() {
                             <Link href="/" className="text-lg md:text-[21px] lg:text-[24px] text-[#131313] uppercase">UrbanElegance</Link>
                         </h2>
                     </div>
-                    <div className={`${fontRoboto.className} hidden md:flex items-center md:gap-x-6 lg:gap-x-8 md:text-base lg:text-lg text-[#131313]`}>
+                    <div className={`hidden md:flex items-center md:gap-x-6 lg:gap-x-8 md:text-base lg:text-lg text-[#131313]`}>
                         <Link href="/">Discover</Link>
                         <Link href="/">Product</Link>
                         <Link href="/">Mens</Link>
                         <Link href="/">Womens</Link>
                         <Link href="/">Kids</Link>
                     </div>
-                    <div className="flex items-center gap-x-3 md:gap-x-4">
-                        <div className="relative h-[40px] sm:h-[44px]">
+                    <div className="w-full md:w-auto flex justify-end items-center gap-x-3 md:gap-x-4">
+                        <div className="relative h-[40px] sm:h-[44px] mr-auto md:mr-0">
                             <input
                                 id="icon-username"
                                 type="text"

@@ -7,20 +7,24 @@ import { fontVarien } from '@/styles/fonts';
 import FrontTitleSection from "@/components/front/home/title-section";
 import FrontHomeProducts from "@/components/front/home/products";
 import FrontProductsFilter from "@/components/front/home/products-filter";
+import { promises as fs } from 'fs';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Discover Innovative Designs"
 };
 
-export default function Page() {
+export default async function Page() {
+  const file = await fs.readFile(process.cwd() + '/src/data/index.json', 'utf8');
+  const { brands, categories, products } = JSON.parse(file);
+  const showProducts = products.slice(0, 6);
   return (
     <>
       {/* HEADER */}
       <header className="w-full relative py-2.5 md:py-4 px-2.5 md:px-4">
         <Image className="h-[630px] md:h-[650px] lg:h-[700px] w-full object-cover rounded-[16px] md:rounded-[20px]" priority={true} src="/images/a289883b71e651780ddbd7bd232e292a.jpg" height={700} width={1408} alt="Banner" />
-        <div className="h-full w-full absolute top-0 left-0 flex items-center px-[20px] md:px-[40px] lg:px-[56px] z-20">
-          <div className="container">
+        <div className="h-full w-full absolute top-0 left-0 flex items-center z-20">
+          <div className="container px-10 md:px-6 lg:px-8 xl:px-10">
             <div className="w-full max-w-[993px] text-black">
               <h2 className={`${fontVarien.className} text-[38px] sm:text-[41px] md:text-[48px] lg:text-[58px] xl:text-[72px] leading-[38px] sm:leading-[41px] md:leading-[48px] lg:leading-[58px] xl:leading-[72px] mb-7 md:mb-8 lg:mb-10`}>Discover Innovative Designs, Premium Quality, and<br /> Unmatched Style</h2>
               <p className="w-full max-w-[843px] text-base md:text-lg lg:text-xl text-[#212121] mb-7 md:mb-8 lg:mb-10">Immerse Yourself in a World of Fashion Innovation, Where Each Piece is Meticulously Crafted to Combine Superior Quality with Unparalleled Style. From Avant-Garde Designs to Timeless Classics, Our Collection is Curated to Elevate Your Wardrobe and Reflect Your Unique Taste. </p>
@@ -37,12 +41,12 @@ export default function Page() {
           <div className="container px-8 sm:px-10 md:px-12 lg:px-14 xl:px-16">
             <FrontTitleSection title="We Are Supported By" classList="mb-7 md:mb-8 lg:mb-10 text-center" />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 md:gap-5 lg:gap-6">
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
-              <BoxImage image="Zara_(retailer)-Logo.wine_1.png" alt="Zara" />
+              <BoxImage image="supported-1.svg" alt="Logo Ipsum" />
+              <BoxImage image="supported-2.svg" alt="Logo Ipsum" />
+              <BoxImage image="supported-3.svg" alt="Logo Ipsum" />
+              <BoxImage image="supported-4.svg" alt="Logo Ipsum" />
+              <BoxImage image="supported-5.svg" alt="Logo Ipsum" />
+              <BoxImage image="supported-6.svg" alt="Logo Ipsum" />
             </div>
           </div>
         </div>
@@ -57,20 +61,20 @@ export default function Page() {
             </div>
             <div className="flex flex-wrap md:flex-nowrap justify-between gap-y-5 gap-x-4">
               <article className="h-[460px] sm:h-[500px] md:h-[560px] lg:h-[600px] xl:h-[620px] w-full md:w-1/2 relative overflow-hidden rounded-[28px] md:rounded-[34px] lg:rounded-[41px] group">
-                <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/5333e451e30f5d9eded4cac52a774890.png" height={620} width={656} alt="Air Jordan 1 X LV" />
+                <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/coming-soon-1.jpg" priority={true} height={620} width={656} alt="Nike Air Jordan 1 High “Bubble Gum”" />
                 <div className="w-full absolute bottom-4 z-10 px-4">
                   <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between bg-white p-4 rounded-[28px] md:rounded-[28px] lg:rounded-[32px]">
-                    <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0`}>Air Jordan 1 x LV</h3>
-                    <ShopNow text="Shop Now" link="/product/hello-world" classList="h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
+                    <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0 grow`}>Nike Air Jordan 1 High “Bubble Gum”</h3>
+                    <ShopNow text="Shop Now" link="/product/hello-world" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
                   </div>
                 </div>
               </article>
               <article className="h-[460px] sm:h-[500px] md:h-[560px] lg:h-[600px] xl:h-[620px] w-full md:w-1/2 relative overflow-hidden rounded-[28px] md:rounded-[34px] lg:rounded-[41px] group">
-                <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/26be3ddae218ab11abae26352d732b02.png" height={620} width={656} alt="Air Jordan 1 X Prada" />
+                <Image className="h-full w-full object-cover transition-all duration-200 transform group-hover:scale-110" src="/images/coming-soon-2.jpg" priority={true} height={620} width={656} alt="Nike x Travis Scott x Fragment" />
                 <div className="w-full absolute bottom-4 z-10 px-4">
                   <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between bg-white p-4 rounded-[28px] md:rounded-[28px] lg:rounded-[32px]">
-                    <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0`}>Air Jordan 1 x Prada</h3>
-                    <ShopNow text="Shop Now" link="/product/hello-world" classList="h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
+                    <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0 grow`}>Nike x Travis Scott x Fragment</h3>
+                    <ShopNow text="Shop Now" link="/product/hello-world" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
                   </div>
                 </div>
               </article>
@@ -84,7 +88,7 @@ export default function Page() {
           <div className="container px-5 md:px-6 lg:px-8 xl:px-10">
             <FrontTitleSection title="Our Product" classList="mb-5 md:mb-6" />
             <FrontProductsFilter />
-            <FrontHomeProducts />
+            <FrontHomeProducts products={showProducts} />
           </div>
         </div>
       </main>
@@ -105,7 +109,8 @@ export default function Page() {
       {/* BANNER */}
       <section className="w-full h-[563px] relative px-2.5 md:px-4 overflow-hidden">
         <div className="h-[563px] w-full relative rounded-[16px] md:rounded-[20px] overflow-hidden">
-          <Image className="h-full w-full object-cover" src="/images/476cf2f57d0eecb08c9ca0126becf8a3-min.png" height={563} width={1408} alt="Banner" />
+          <Image className="h-full w-full object-cover" src="/images/home-unlock.jpg" height={563} width={1408} alt="Unlock the Secret to
+Effortless Style" />
           <div className="h-full w-full absolute top-0 left-0 bg-[#070707] z-10 opacity-25"></div>
         </div>
         <div className="h-full w-full absolute top-0 left-0 flex items-center justify-center z-20 px-5 md:px-0">
