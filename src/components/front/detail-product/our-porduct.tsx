@@ -6,7 +6,21 @@ import CardProduct from "@/components/front/cards/card-product";
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-export default function OurProdcutSwiper() {
+type ProductProps = {
+    id: number,
+    name: string,
+    brandId: number,
+    categoryId: number,
+    description: string,
+    price: number,
+    image: string,
+    created_at: string,
+    total_buy: number,
+    colors: string[],
+    slug: string,
+}
+
+export default function OurProdcutSwiper({ products }: { products: ProductProps[] }) {
     const swiperRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -50,11 +64,9 @@ export default function OurProdcutSwiper() {
                 <h2 className={`${fontVarien.className} text-[40px] text-[#111111] mb-6 sm:mb-7 md:mb-8 lg:mb-9 xl:mb-10`}>Our Product</h2>
                 <div ref={swiperRef} className="w-full swiper-container relative overflow-hidden">
                     <div className="swiper-wrapper">
-                        <CardProduct isSwiper={true} title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct isSwiper={true} title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct isSwiper={true} title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct isSwiper={true} title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
-                        <CardProduct isSwiper={true} title="UNIQLO METAL GEAR UT (SHORT SLEEVE GRAPHIC T-SHIRT" image="2bd7f1f53dbd0b611e9e1006b243f782.png" slug="" category="Tshirt" colors={["bg-[#000000]", "bg-[#1F2E94]", "bg-[#E2DBCA]"]} price="$12.90" />
+                        {products.map((product: ProductProps) => (
+                            <CardProduct isSwiper={true} key={product.id} title={product.name} image={product.image} slug={product.slug} category="" colors={product.colors} price={product.price} />
+                        ))}
                     </div>
                 </div>
             </div>
