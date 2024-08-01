@@ -4,6 +4,7 @@ import Image from "next/image";
 import { promises as fs } from 'fs';
 import type { Metadata } from "next";
 import OurProdcutSwiper from "@/components/front/detail-product/our-porduct";
+import ProductImage from "@/components/front/detail-product/product-image";
 
 export const metadata: Metadata = {
     title: "Detail Product -"
@@ -58,17 +59,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
             {/* MAIN PRODUCT */}
             <main className="w-full">
                 <div className="container flex flex-wrap md:flex-wrap lg:flex-nowrap md:gap-x-5 lg:gap-x-6 xl:gap-x-10 py-6 px-5 md:px-6 lg:px-6 xl:px-10">
-                    <div className="flex-none flex flex-wrap md:flex-nowrap gap-x-4 w-full md:w-[500px] lg:w-[580px] xl:w-[650px]">
-                        <div className="order-2 md:order-1 flex md:flex-col gap-4 flex-wrap flex-none w-full md:w-[143px]">
-                            <Image className="h-[143px] w-[143px] object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/2bd7f1f53dbd0b611e9e1006b243f782.png`} height={622} width={485} alt={"Hello"} />
-                            <Image className="h-[143px] w-[143px] object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/2bd7f1f53dbd0b611e9e1006b243f782.png`} height={622} width={485} alt={"Hello"} />
-                            <Image className="h-[143px] w-[143px] object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/2bd7f1f53dbd0b611e9e1006b243f782.png`} height={622} width={485} alt={"Hello"} />
-                        </div>
-                        <div className="h-[400px] md:h-[500px] lg:h-[580px] xl:h-[662px] order-1 md:order-2 grow mb-2.5 md:mb-3 lg:mb-0">
-                            <Image className="h-full w-full object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/2bd7f1f53dbd0b611e9e1006b243f782.png`} height={622} width={485} alt={"Hello"} />
-                        </div>
-                    </div>
-                    <div className="grow text-[#111111] mb-2.5 md:mb-3 xl:mb-4">
+                    <ProductImage imagePrimary={product.image} />
+                    <div className="grow text-[#111111] mb-2.5 md:mb-3 xl:mb-4 mt-5 md:mt-5 lg:mt-0">
                         <section className="flex flex-col gap-y-2.5 md:gap-y-3 xl:gap-y-4 mb-2.5 md:mb-3 xl:mb-4">
                             <h2 className="font-semibold text-base md:text-base lg:text-base xl:text-lg">Uniqlo</h2>
                             <h1 className="font-bold text-[21px] md:text-[23px] lg:text-[25px] xl:text-[28px] leading-[27px] md:leading-[28px] lg:leading-[30px] xl:leading-[33.89px]">{product.name}</h1>

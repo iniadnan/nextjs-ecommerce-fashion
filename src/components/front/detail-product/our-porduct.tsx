@@ -36,10 +36,10 @@ export default function OurProdcutSwiper({ products }: { products: ProductProps[
                 breakpoints: {
                     300: {
                         slidesPerView: "auto",
-                        spaceBetween: 16,
+                        spaceBetween: 12,
                     },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: "auto",
                         spaceBetween: 12,
                     },
                     1024: {
@@ -60,8 +60,8 @@ export default function OurProdcutSwiper({ products }: { products: ProductProps[
     }, []);
     return (
         <div className="w-full">
-            <div className="container py-10 px-5 md:px-6 lg:px-6 xl:px-10">
-                <h2 className={`${fontVarien.className} text-[40px] text-[#111111] mb-6 sm:mb-7 md:mb-8 lg:mb-9 xl:mb-10`}>Our Product</h2>
+            <div className="container pt-5 md:pt-6 lg:pt-8 xl:pt-10 pb-10 px-5 md:px-6 lg:px-6 xl:px-10">
+                <h2 className={`${fontVarien.className} text-[28px] sm:text-[30px] md:text-[32px] lg:text-[35px] xl:text-[40px] text-[#111111] mb-6 sm:mb-7 md:mb-8 lg:mb-9 xl:mb-10`}>Our Product</h2>
                 <div ref={swiperRef} className="w-full swiper-container relative overflow-hidden">
                     <div className="swiper-wrapper">
                         {products.map((product: ProductProps) => (
