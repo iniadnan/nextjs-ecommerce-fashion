@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/front/breadcrumb";
 import ButtonColor from "@/components/front/buttons/button-color";
 import Image from "next/image";
-import { promises as fs } from 'fs';
+import { products } from "@/data";
 import type { Metadata } from "next";
 import OurProdcutSwiper from "@/components/front/detail-product/our-porduct";
 import ProductImage from "@/components/front/detail-product/product-image";
@@ -44,10 +44,15 @@ const getColorNameByCode = (code: string) => {
 };
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const file = await fs.readFile(process.cwd() + '/src/data/index.json', 'utf8');
-    const { brands, categories, products } = JSON.parse(file);
-    const showProducts = products.slice(0, 6);
+    const showProducts = products;
     const product = products.find((product: ProductProps) => product.slug === params.slug);
+    if(!product) {
+        return (
+            <>
+                <h1>Not Found!</h1>
+            </>
+        )
+    }
     return (
         <>
             <div className="w-full">

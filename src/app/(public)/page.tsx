@@ -7,17 +7,15 @@ import { fontVarien } from '@/styles/fonts';
 import FrontTitleSection from "@/components/front/home/title-section";
 import FrontHomeProducts from "@/components/front/home/products";
 import FrontProductsFilter from "@/components/front/home/products-filter";
-import { promises as fs } from 'fs';
+import { products } from "@/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Discover Innovative Designs"
 };
 
-export default async function Page() {
-  const file = await fs.readFile(process.cwd() + '/src/data/index.json', 'utf8');
-  const { brands, categories, products } = JSON.parse(file);
-  const showProducts = products.slice(0, 6);
+export default function Page() {
+  const showProducts = products;
   return (
     <>
       {/* HEADER */}

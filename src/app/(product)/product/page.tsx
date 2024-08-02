@@ -4,7 +4,7 @@ import CardProduct from "@/components/front/cards/card-product";
 import FrontProductsFilter from "@/components/front/home/products-filter";
 import Pagination from "@/components/front/pagination";
 import type { Metadata } from "next";
-import { promises as fs } from 'fs';
+import { products } from "@/data";
 
 type ProductProps = {
     id: number,
@@ -25,9 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    const file = await fs.readFile(process.cwd() + '/src/data/index.json', 'utf8');
-    const { brands, categories, products } = JSON.parse(file);
-    const showProducts = products.slice(0, 6);
+    const showProducts = products;
     return (
         <>
             <section className="w-full">
