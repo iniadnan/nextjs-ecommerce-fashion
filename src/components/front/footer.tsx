@@ -80,11 +80,11 @@ export default function FrontFooter() {
                         <div className="w-1/2 md:w-auto text-base">
                             <h3 className={`${fontVarien.className} text-lg md:text-xl lg:text-[24px] text-white mb-3 md:mb-4`}>Shop</h3>
                             <div className="flex flex-col gap-y-2 text-white opacity-80">
-                                <Link href="/">Woman</Link>
-                                <Link href="/">Man</Link>
-                                <Link href="/">Baby</Link>
-                                <Link href="/">Childern</Link>
-                                <Link href="/">Divided</Link>
+                                <Link href="/product">Woman</Link>
+                                <Link href="/product">Man</Link>
+                                <Link href="/product">Baby</Link>
+                                <Link href="/product">Childern</Link>
+                                <Link href="/product">Divided</Link>
                             </div>
                         </div>
                         <div className="w-1/2 md:w-auto text-base">

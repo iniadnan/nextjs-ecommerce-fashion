@@ -36,11 +36,11 @@ export default function FrontNavbar() {
                         </h2>
                     </div>
                     <div className={`hidden md:flex items-center md:gap-x-6 lg:gap-x-8 md:text-base lg:text-lg text-[#131313]`}>
-                        <Link href="/">Discover</Link>
-                        <Link href="/">Product</Link>
-                        <Link href="/">Mens</Link>
-                        <Link href="/">Womens</Link>
-                        <Link href="/">Kids</Link>
+                        <Link href="/product">Discover</Link>
+                        <Link href="/product">Product</Link>
+                        <Link href="/product">Mens</Link>
+                        <Link href="/product">Womens</Link>
+                        <Link href="/product">Kids</Link>
                     </div>
                     <div className="w-full md:w-auto flex justify-end items-center gap-x-3 md:gap-x-4">
                         <div className="relative h-[40px] sm:h-[44px] mr-auto md:mr-0">

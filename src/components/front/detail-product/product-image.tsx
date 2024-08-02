@@ -32,6 +32,7 @@ export default function ProductImage({ imagePrimary }: { imagePrimary: string })
                         spaceBetween: 16,
                     },
                     1240: {
+                        direction: "vertical",
                         slidesPerView: 4,
                         spaceBetween: 16,
                     }

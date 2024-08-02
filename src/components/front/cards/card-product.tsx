@@ -5,7 +5,7 @@ import clsx from "clsx";
 export default function CardProduct({ title, image, slug, category, colors, price, isSwiper }: { title: string, image: string, slug: string, category: string, colors: string[], price: number, isSwiper?: boolean }) {
     return (
         <article className={clsx("w-full group", { 'swiper-slide': isSwiper })}>
-            <Link href={`product/${slug}`} className="h-[300px] sm:h-[340px] md:h-[380px] lg:h-[420px] xl:h-[500px] w-full relative block rounded-[20px] md:rounded-[24px] lg:rounded-[28px] xl:rounded-[32px] overflow-hidden">
+            <Link href={isSwiper ? slug : `product/${slug}`} className="h-[300px] sm:h-[340px] md:h-[380px] lg:h-[420px] xl:h-[500px] w-full relative block rounded-[20px] md:rounded-[24px] lg:rounded-[28px] xl:rounded-[32px] overflow-hidden">
                 <Image className="h-full w-full object-cover transition-all transform duration-200 group-hover:scale-110" src={`/images/${image}`} height={488} width={432} alt={title} />
                 <p className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 z-10 bg-white inline-block rounded-full py-1.5 sm:py-2 md:py-2.5 xl:py-3 px-3 sm:px-4 md:px-5 xl:px-6 font-medium text-[#171717] text-base sm:text-lg md:text-[21px] lg:text-[21px] xl:text-[24px]">${price}</p>
                 <div className="w-full absolute bottom-2 lg:bottom-3 xl:bottom-4 z-10 px-2 lg:px-3 xl:px-4">

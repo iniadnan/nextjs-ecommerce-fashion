@@ -28,7 +28,7 @@ export default async function Page() {
             <div className="w-full max-w-[993px] text-black">
               <h2 className={`${fontVarien.className} text-[38px] sm:text-[41px] md:text-[48px] lg:text-[58px] xl:text-[72px] leading-[38px] sm:leading-[41px] md:leading-[48px] lg:leading-[58px] xl:leading-[72px] mb-7 md:mb-8 lg:mb-10`}>Discover Innovative Designs, Premium Quality, and<br /> Unmatched Style</h2>
               <p className="w-full max-w-[843px] text-base md:text-lg lg:text-xl text-[#212121] mb-7 md:mb-8 lg:mb-10">Immerse Yourself in a World of Fashion Innovation, Where Each Piece is Meticulously Crafted to Combine Superior Quality with Unparalleled Style. From Avant-Garde Designs to Timeless Classics, Our Collection is Curated to Elevate Your Wardrobe and Reflect Your Unique Taste. </p>
-              <Link href="/products" className="h-[56px] w-[159px] inline-flex items-center justify-center bg-[#EB4A26] font-medium text-base text-white rounded-[24px]">
+              <Link href="/product" className="h-[56px] w-[159px] inline-flex items-center justify-center bg-[#EB4A26] font-medium text-base text-white rounded-[24px]">
                 Shop Now
               </Link>
             </div>
@@ -65,7 +65,7 @@ export default async function Page() {
                 <div className="w-full absolute bottom-4 z-10 px-4">
                   <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between bg-white p-4 rounded-[28px] md:rounded-[28px] lg:rounded-[32px]">
                     <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0 grow`}>Nike Air Jordan 1 High “Bubble Gum”</h3>
-                    <ShopNow text="Shop Now" link="/product/hello-world" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
+                    <ShopNow text="Shop Now" link="/product" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
                   </div>
                 </div>
               </article>
@@ -74,7 +74,7 @@ export default async function Page() {
                 <div className="w-full absolute bottom-4 z-10 px-4">
                   <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between bg-white p-4 rounded-[28px] md:rounded-[28px] lg:rounded-[32px]">
                     <h3 className={`${fontVarien.className} text-[22px] sm:text-25px md:text-[28px] lg:text-[32px] text-[#111111] mb-2.5 md:mb-0 grow`}>Nike x Travis Scott x Fragment</h3>
-                    <ShopNow text="Shop Now" link="/product/hello-world" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
+                    <ShopNow text="Shop Now" link="/product" classList="flex-none h-[48px] md:h-[50px] lg:h-[55px] w-[152px]" />
                   </div>
                 </div>
               </article>

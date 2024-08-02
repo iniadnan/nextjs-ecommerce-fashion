@@ -7,11 +7,11 @@ export default function Breadcrumb() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 16L14 12L10 8" stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <Link href="/">Product</Link>
+            <Link href="/product">Product</Link>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 16L14 12L10 8" stroke="#A3A3A3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <Link href="/" className="text-[#171717]">Hoodie</Link>
+            <Link href="/product" className="text-[#171717]">Hoodie</Link>
         </div>
     )
 }
