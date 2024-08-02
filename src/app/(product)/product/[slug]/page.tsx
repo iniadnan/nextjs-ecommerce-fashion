@@ -48,7 +48,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const { brands, categories, products } = JSON.parse(file);
     const showProducts = products.slice(0, 6);
     const product = products.find((product: ProductProps) => product.slug === params.slug);
-    console.log(product)
     return (
         <>
             <div className="w-full">
